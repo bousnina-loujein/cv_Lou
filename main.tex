@@ -1,0 +1,164 @@
+% ============================================================
+%  CV -- Loujein Bousnina
+%  Cible : poste en systemes embarques / IoT / electronique
+%  Style : CV compact, serif classique (Latin Modern)
+%  Compilation : pdflatex main.tex
+% ============================================================
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[a4paper,top=1.3cm,bottom=1.3cm,left=1.8cm,right=1.8cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[french]{babel}
+\usepackage{microtype}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+\definecolor{linkblue}{HTML}{1155CC}
+
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=linkblue,
+  linkcolor=linkblue,
+  pdftitle={CV - Loujein Bousnina - Systèmes embarqués et IoT},
+  pdfauthor={Loujein Bousnina}
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+% ---------- Titres de section ----------
+\titleformat{\section}{\large\bfseries\scshape}{}{0em}{}[\vspace{1pt}\titlerule]
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+
+% ---------- Listes ----------
+\setlist[itemize]{leftmargin=12pt, itemsep=0pt, topsep=1pt, parsep=0pt, label=\textendash}
+
+% ---------- Ligne Formation : date | Ecole --- Diplome | note (droite, italique) ----------
+\newcommand{\cvrow}[4]{%
+  \noindent\begin{tabularx}{\linewidth}{@{}p{2.3cm}X@{}}
+    \small #1 & \textbf{#2} --- #3 \hfill\textit{\small #4}\\
+  \end{tabularx}\par\vspace{3pt}%
+}
+
+% ---------- Ligne Experience / Projet : Titre (gauche) -- Date (droite) ----------
+\newcommand{\cvhead}[2]{%
+  \noindent\begin{tabularx}{\linewidth}{@{}X r@{}}
+    \textbf{#1} & \textit{\small #2}\\
+  \end{tabularx}\vspace{1pt}%
+}
+
+\begin{document}
+
+% ================= EN-TETE =================
+\begin{center}
+  {\LARGE Loujein Bousnina}\\[3pt]
+  {\large Systèmes embarqués \textbullet{} IoT \textbullet{} Électronique}\\[4pt]
+  {\small +216 24 411 846
+    \quad$|$\quad \href{mailto:loujeinbousnina2020@gmail.com}{loujeinbousnina2020@gmail.com}
+    \quad$|$\quad \href{https://www.linkedin.com/in/loujein-bousnina/}{linkedin.com/in/loujein-bousnina}}\\[1pt]
+  {\small Bardo, Tunisie \quad$|$\quad Né le 04/11/2000 \quad$|$\quad Permis B}
+\end{center}
+\vspace{3pt}
+\hrule
+\vspace{2pt}
+
+% ================= PROFIL =================
+\section{Profil}
+{\small
+Jeune diplômée du cycle d'ingénieur en informatique, spécialisée en Systèmes Logiciels Embarqués, Ambiants
+et Mobiles (SLEAM). Passionnée par les nouvelles technologies, l'IoT, l'intelligence artificielle et les systèmes
+embarqués. Recherche un poste en systèmes embarqués, IoT ou électronique.
+\par}
+
+% ================= FORMATION =================
+\section{Formation}
+\cvrow{2023 -- 2026}{Esprit, Ariana}{Cycle d'ingénieur en informatique, spécialité \textbf{SLEAM}\newline
+  \textit{\small Systèmes Logiciels Embarqués, Ambiants et Mobiles}}{}
+\cvrow{2019 -- 2023}{ISTIC, Borj Cédria}{Licence en Informatique Industrielle}{}
+\cvrow{2019}{Lycée Sijoumi, Tunisie}{Baccalauréat Sciences Techniques}{}
+
+% ================= COMPETENCES =================
+\section{Compétences techniques}
+\noindent\begin{tabularx}{\linewidth}{@{}>{\bfseries}p{5.2cm}X@{}}
+  Embarqué \& électronique    & \small ESP32, Arduino, Raspberry Pi, C/C++ embarqué \\[2pt]
+  IoT \& communication        & \small MQTT, GSM, RFID/NFC, GPS, Node-RED \\[2pt]
+  Langages \& IA              & \small C, C++, Python, JavaScript, TypeScript ; modèles LSTM \\[2pt]
+  Web, mobile \& DevOps       & \small React, React Native, Flutter, Node.js, MongoDB, Docker \\[2pt]
+  Savoir-être                 & \small Autonomie, organisation, communication, leadership \\
+\end{tabularx}
+
+% ================= EXPERIENCE =================
+\section{Expérience professionnelle}
+
+\cvhead{MakerSkills --- Stage PFE : Développeur IoT \& Full-Stack}{Fév. 2026 -- Août 2026}
+\begin{itemize}
+  \item \textbf{RondeGuard} : solution IoT de suivi d'agents en temps réel (\textbf{ESP32, MQTT, RFID/NFC}).
+  \item Applications mobile et web (React Native, React, Node.js, MongoDB, Docker).
+\end{itemize}
+
+\cvhead{SNCFT, Département Informatique --- Stage ingénieur}{Juin 2025 -- Sept. 2025}
+\begin{itemize}
+  \item Système de \textbf{localisation des trains en temps réel} par GPS et IoT.
+  \item ESP32, Node-RED et MongoDB pour le traitement et la visualisation des données.
+\end{itemize}
+
+\cvhead{SNCFT, Département Informatique --- Stage}{Juin 2023 -- Août 2023}
+\begin{itemize}
+  \item Optimisation \textbf{SEO} et indexation des pages web pour améliorer la visibilité en ligne.
+\end{itemize}
+
+\cvhead{SOTRADIES, Département Technique --- Stage PFE licence}{Fév. 2023 -- Mai 2023}
+\begin{itemize}
+  \item Remise en état de la commande d'un pont élévateur à 4 colonnes.
+\end{itemize}
+
+\cvhead{Chakira Cable, Maintenance générale --- Stage technicien}{Juil. 2022 -- Août 2022}
+\begin{itemize}
+  \item Conception d'un système de sécurité pour armoire électrique à base de microcontrôleurs \textbf{Arduino}.
+\end{itemize}
+
+\cvhead{Coficab, Département Maintenance --- Stage}{Juil. 2021 -- Août 2021}
+\begin{itemize}
+  \item Maintenance d'équipements électriques industriels.
+\end{itemize}
+% ================= PROJETS =================
+\section{Projets académiques}
+
+\cvhead{WaterSec (Istidema) --- Projet intégré, Esprit}{Fév. 2025 -- Juin 2025}
+\begin{itemize}
+  \item Solution intelligente de gestion de l'eau (application Flutter, MongoDB).
+  \item Détection de fuites par \textbf{LSTM} (85\,\% de précision) ; \textbf{$-$30\,\% de gaspillage d'eau}.
+\end{itemize}
+
+\cvhead{Smart Health Glove --- Gant connecté de santé (wearable)}{}
+\begin{itemize}
+  \item Gant intelligent de suivi de la santé, avec antenne intégrée pour la communication sans fil.
+\end{itemize}
+
+% Format pour ajouter un projet :
+% \cvhead{Titre du projet --- type}{2025}
+% \begin{itemize}
+%   \item Objectif du projet et votre rôle.
+%   \item Matériel et technologies : carte, capteurs, protocoles (I2C, SPI, UART...).
+%   \item Résultat concret (mesure, démonstration, note...).
+% \end{itemize}
+
+% ================= CERTIFICATIONS =================
+\section{Certifications}
+\noindent\begin{tabularx}{\linewidth}{@{}>{\bfseries}p{5.2cm}X>{\itshape\small}r@{}}
+  AWS Academy           & \small Cloud Foundations & oct. 2025 \\[2pt]
+  Hashgraph Association & \small Hashgraph Developer (attestation de participation) & oct. 2025 \\[2pt]
+  NVIDIA                & \small AI on Jetson Nano \textbullet{} AI for Anomaly Detection \textbullet{} AI for Predictive Maintenance \textbullet{} Generative AI with Diffusion Models & janv. 2025 \\[2pt]
+  DataCamp              & \small AI Fundamentals \textbullet{} AI Ethics & janv. 2025 \\
+\end{tabularx}
+
+% ================= LANGUES =================
+\section{Langues}
+\small Arabe (langue maternelle) \quad$|$\quad Français (courant) \quad$|$\quad Anglais (courant) \quad$|$\quad Allemand (débutant)
+
+\end{document}
